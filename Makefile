@@ -26,6 +26,7 @@ specs/cells/anyone_can_pay: c/anyone_can_pay.c ${PROTOCOL_HEADER} c/common.h c/s
 	$(OBJCOPY) --strip-debug --strip-all $@
 
 build/secp256k1_data_info.h: build/dump_secp256k1_data
+	mkdir -p specs/cells/
 	$<
 
 build/dump_secp256k1_data: c/dump_secp256k1_data.c $(SECP256K1_SRC)
